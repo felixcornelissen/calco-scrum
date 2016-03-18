@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Planning </title>
+        <link rel="stylesheet" type="text/css" href="css_main.css">     
+    </head>
+<body>
+
+      <div id="container">
+		<div id="menu">
+			<ul id="menubar">
+				<li id="navbuttons"><a href = "html_productbacklog.html" target = "_parent"> Product Backlog</a></li>
+				<li id="navbuttons"><a href = "html_scrumbord.html" target = "_parent"> Scrumbord</a>	</li>
+				<li id="navbuttons"><a href = "html_planning.html" target = "_parent"> Planning</a></li>
+				<li id="navbuttons"><a href = "html_teamoverzicht.html" target = "_parent"> Teams</a></li>
+				<li id="navbuttons"><a href = "html_instellingen.html" target = "_parent"> Instellingen</a></li>
+			</ul>
+		</div>
+       
+        <div id="main">
+       
+        <button type="button" style="margin-bottom:10px;" onCLick="return confirm('Are you sure?')">New Planning</button>
+        <!--Functionaliteit om nieuwe planning aan te maken. Alle voltooide (grijze) taken worden verwijderd, maar niet uit database-->
+        <button type="button" style="margin-bottom:10px;" onCLick="return confirm('Are you sure?')">Confirm Planning</button>
+        <br>
+        <div>
+	
+	<textarea rows = "4" cols = "100" onclick="this.focus();this.select()" id = "Definition of Done">Voer hier de Definition of Done in.</textarea>         
+	
+
+<button type="button" style="vertical-align:top;" onCLick="return confirm('Confirm Definition of Done is ready.')">Accept DoD</button></br> <!--Als de DoD ready is, zet de button Accept de DoD vast nadat er een pop-up scherm komt met: Are you sure? Yes, No-->         		
+	
+
+	<textarea rows = "4" cols = "100" onclick="this.focus();this.select()" id = "SprintGoal">Voer hier de Sprint Goal in.</textarea> 
+       	
+
+<button type="button" style="vertical-align:top" onCLick="return confirm('Confirm Sprint Goal is ready.')">Accept Sprint Goal</button> <!--Als de SG ready is, zet de button Accept de SG vast nadat er een pop-up scherm komt met: Are you sure? Yes, No-->
+
+
+        </div>
+            
+
+
+     <div id="alleRegels">
+            <ul id="header">
+                <li id="kolom0">User Stories</li>
+                <li id="kolom1">Story Points</li>
+                <li id="kolom2">Accept User Story</li>
+                <li id="kolom3">Tasks</li>
+            </ul>
+        <ul>
+                <li><input type="text" name="userstoryname" value="Name User Story" style="width:125px;" readonly></li> <!--User Stories koppeling met Product Backlog, niet veranderbaar in tabblad Planning-->
+                <li><label for="storypoint"></label><input id="storypoint" type="number" value="0" min="1" style="width:30px;"/></li>
+                <!--Voordat de checkbox kan worden gecheckt, moet er een waarde zijn toegewezen aan StoryPoints. Nadat de checkbox is gecheckt kan deze waarde niet meer worden aangepast.-->
+                <li><input type="checkbox" name="acceptuserstory" value="Accept"></li>
+                <li><button type="button" Onclick="window.location.href='html_planning_edittasks.html'">Show Tasks</button></li>
+               </ul>
+            <ul>
+               <li><input type="text" name="userstoryname" value="Name User Story" style="width:125px;" readonly></li>  
+               <li><label for="storypoint"></label><input id="storypoint" type="number" value="0" min="1" style="width:30px;"/></li> 
+                <li><input type="checkbox" name="acceptuserstory" value="Accept"></li>
+                <li><button type="button" Onclick="window.location.href='html_planning_edittasks.html'">Show Tasks</button></li>
+            </ul>
+            <ul>
+               <li><input type="text" name="userstoryname" value="Name User Story" style="width:125px;" readonly></li>   
+               <li><label for="storypoint"></label><input id="storypoint" type="number" value="0" min="1" style="width:30px;"/></li> 
+               <li><input type="checkbox" name="acceptuserstory" value="Accept"></li>
+               <li><button type="button" Onclick="window.location.href='html_planning_edittasks.html'">Show Tasks</button></li>
+            </ul>
+            <ul>
+               <li><input type="text" name="userstoryname" value="Name User Story" style="width:125px;" readonly></li>  
+               <li><label for="storypoint"></label><input id="storypoint" type="number" value="0" min="1" style="width:30px;"/></li>
+                <li><input type="checkbox" name="acceptuserstory" value="Accept"></li>
+                <li><button type="button" Onclick="window.location.href='html_planning_edittasks.html'">Show Tasks</button></li>  
+            </ul>
+            <ul>
+               <li><input type="text" name="userstoryname" value="Name User Story" style="width:125px;" readonly></li>    
+               <li><label for="storypoint"></label><input id="storypoint" type="number" value="0" min="1" style="width:30px;"/></li>
+                <li><input type="checkbox" name="acceptuserstory" value="Accept"></li>
+                <li><button type="button" Onclick="window.location.href='html_planning_edittasks.html'">Show Tasks</button></li>
+            </ul>
+       
+
+
+    </div></div>
+</div>
+</body>
+</html>

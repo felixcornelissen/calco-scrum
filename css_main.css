@@ -1,0 +1,269 @@
+﻿/*Opmaak Headings and tekst*/
+h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	color = "black";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 15.4px;
+	
+}
+p{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color = "black";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+	
+}
+/*Opmaak algemeen: geldend voor alle pagina's*/
+
+/* unvisited link */
+a:link {
+    color: red;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: black;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("brown_paper.jpg");
+    background-size: 100%;
+    background-repeat:repeat;
+}
+.column {
+	background-color: white; 
+    width:24%; 
+    height:400px;
+    float:left;
+    border-right-style:solid;
+    border-width: 2px;
+}
+
+.functiecolumn { 
+    background-color: white; 
+    width:18%; 
+    height:400px;
+    float:left;
+}
+
+.header {
+	background-color: white;
+	text-align: center;
+	width: 24%;
+	float: left;
+	border-right-style:solid;
+	border-bottom-style:solid;
+	border-width: 2px;
+
+}
+
+.functieheader {
+	background-color: white;
+	text-align: center;
+	width: 18%;
+	float: left;
+}
+
+/*Opmaak van de kolommen, aan de hand van ul.
+Suggestie: alle id code (id="Kolom1" etc.) verwijderen, want ze verwijzen niet naar CSS*/     
+
+
+
+ul {
+    list-style-type: none;
+    padding-left:2%;
+    border: solid #000 1px;
+    margin:10px 0px;
+}
+
+ul li {
+    display:inline-block;
+    vertical-align: middle; 
+    width: 150px;
+}
+
+/*Deze verwijst specifiek naar Product Backlog>Eerste kolom: Priority*/
+ul li ul {
+    border:none;
+}
+
+
+/*Post-its Scrumboard*/
+#drop-anywhere {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,8);
+  display: none;
+}
+
+#drop-anywhere.show {
+  display: block;
+}
+
+.showmore { 
+    line-height:18px; 
+}
+
+.showmore_content { 
+    position:relative; 
+    overflow:hidden; 
+}  
+
+.showmore_trigger { 
+    width:100%; 
+    height:45px; 
+    line-height:45px; 
+    cursor:pointer; 
+}
+.showmore_trigger span { 
+    display:block; 
+}
+
+/*Planning tab*/
+#container{
+    width:950px;
+    margin: 7% auto;
+	padding-top: 0%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	background-color: white;
+	border-style: solid;
+	border-color: black;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-bottom-width: 1px;
+	border-top-width: 0px;
+	border-width: 1px;
+	box-shadow: 10px 10px 40px 0px black;
+}
+/*Deze header hoort bij de bovenstaande listdefinitie (ul), kan eventueel geïntegreerd worden met bovenstaande
+Suggestie: id #header1 en #header2 kunnen #header worden in html (zie tab teamoverzicht).*/
+#menu{
+	height: 10%;
+	Background-color: black;
+	float: top;
+	margin-left: -4%;
+	margin-right: -4%;
+	box-shadow: 1px 1px 10px 0px black;	
+}
+
+#menubar {
+    list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+} 
+
+#navbuttons {
+	float: center;
+	background-color: white;
+	margin: 1%;
+	width: 17%;
+	border: 1px solid #bbb
+}
+
+#navbuttons a{
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+#navbuttons a:hover {
+    background-color: black;
+	color: white;
+	}
+
+#main{
+	font-weight: normal;
+	font-size:12;
+	width:100%;
+	height: 90%;
+	Background-color: white;
+	float: bottom;
+}
+
+
+/*Hoort bij Scrumboard_addtask code, maar kan onder bovenstaande #container. Maak keuze: width in px of %
+#container_addtask{
+    width:100%;
+    margin: 150px auto;
+}
+*/
+
+/*#knoppen etc. wordt alleen gebruikt in Product Backlog, voor uitlijnen. Zeer omslachtig, kan beter.*/
+#functies{
+	text-align: right;	
+	border:none;
+	}
+	
+/*#functieknop{
+	border:none;
+	vertical-align: middle;
+	margin: 30px 0px;
+	width: 0px;
+	display: inline;
+}*/
+
+.knoppen{
+    float:right;
+    text-align:right;    
+    /*border:none;*/
+}
+
+#table_head{
+	padding: 2% ;
+	Margin: 2%;
+	}
+
+#knoppen ul {
+    border:none;
+    vertical-align: middle;
+    margin: 30px 0px;
+}
+
+#knoppen ul li {
+    width:0px;
+    display:inline;
+}
+
+/* Nog geen idee waar dit voor is*/
+#knoppen button  {
+    margin:auto;
+    vertical-align: middle;
+    display:inline-block;
+}
+
+/* Deze hebben we ook nog niet terug gevonden.*/ 
+#textbox{
+    
+    padding: 5px;
+    background-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    height: 200px;
+    width: auto;
+}
+

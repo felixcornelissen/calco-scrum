@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Add User Story</title>
+		<link rel="stylesheet" type="text/css" href="css_main.css">
+	</head>
+<body>
+	
+    <div id="container">
+		<div id="menu">
+			<ul id="menubar">
+				<li id="navbuttons"><a href = "html_productbacklog.html" target = "_parent"> Product Backlog</a></li>
+				<li id="navbuttons"><a href = "html_scrumbord.html" target = "_parent"> Scrumbord</a>	</li>
+				<li id="navbuttons"><a href = "html_planning.html" target = "_parent"> Planning</a></li>
+				<li id="navbuttons"><a href = "html_teamoverzicht.html" target = "_parent"> Teams</a></li>
+				<li id="navbuttons"><a href = "html_instellingen.html" target = "_parent"> Instellingen</a></li>
+			</ul>
+		</div>
+       
+        <div id="main">
+		
+		<!-- voor de invoer van de naam van een User Story -->
+		<b>Naam User Story</b>
+ 		<form name = "UserStory" id = "UserStory" method= "post" action = " ">
+		<input type = "text" name = "UserStory" value = "Voer hier de naam van de User Story in" size = "49" maxlength = "20">
+		</form> 
+
+		<br> 
+		<br>
+		
+		<!-- voor hier de criteria in -->
+		
+		<b>Criteria</b>
+		<br>
+		<textarea rows = "10" cols= "50">
+		Invoeren criteria
+		</textarea>
+
+		<br>
+		<br>
+
+		<!-- voor het selecteren van de Epic.  -->
+ 		<b>Selecteer Epic</b>
+		<br>
+		<select name = "Epic">
+			<option value = "Aantal1">Epic1
+			<option value = "Aantal2">Epic2
+			<option value = "Aantal2">Epic3
+		</select>
+
+
+		<br>
+		<br>
+		<br> 
+		
+
+		<!-- buttons voor het opslaan en cancelen van de User Story, wederom alleen placeholders -->
+
+                <button type="button" Onclick="window.location.href='html_productbacklog.html'">Save</button>
+
+		<button type="button" Onclick="window.location.href='html_productbacklog.html'">Cancel</button>
+</div>
+</div>
+</body>
+</html>

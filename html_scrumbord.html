@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+table, td {
+border: 1px solid black;
+    table-layout: fixed;
+    background-color: white;
+    vertical-align:top;
+    ondrop="drop(event)" div ondragover="event.preventDefault()"
+}
+#bericht {
+position : absolute;
+top : 400px;
+left : 840px;
+width : 250px;
+height : variable;
+color : #050505;
+background-color : #F3F781;
+padding : 25px;
+border : 2px solid #000000;
+display : none;
+}
+</style>
+
+	<head> 
+		<title> Calco Scrum Applicatie </title>
+		<link rel="stylesheet" type="text/css" href="css_main.css">
+		<script>
+		function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function sluitPopup() {
+if(document.getElementById) {
+document.getElementById('bericht').style.display = "none";
+}
+}
+
+function laatPopupzien(bericht) {
+if(document.getElementById) {
+var x;
+var y;
+x= document.getElementById('tekstbijlinks').offsetRight;
+y= document.getElementById('tekstbijlinks').offsetCenter;
+tekst=''+bericht+'';
+document.getElementById('bericht').style.display = "block";
+document.getElementById('bericht').style.left = x + 140 +'px';
+document.getElementById('bericht').style.top = y - 100 +'px';
+document.getElementById('bericht').innerHTML=tekst;
+}
+}
+// -->
+</script>
+	</head>
+<body>
+	
+    <div id="container">
+		<div id="menu">
+			<ul id="menubar">
+				<li id="navbuttons"><a href = "html_productbacklog.html" target = "_parent"> Product Backlog</a></li>
+				<li id="navbuttons"><a href = "html_scrumbord.html" target = "_parent"> Scrumbord</a>	</li>
+				<li id="navbuttons"><a href = "html_planning.html" target = "_parent"> Planning</a></li>
+				<li id="navbuttons"><a href = "html_teamoverzicht.html" target = "_parent"> Teams</a></li>
+				<li id="navbuttons"><a href = "html_instellingen.html" target = "_parent"> Instellingen</a></li>
+			</ul>
+		</div>
+       
+        <div id="main">
+
+<button onclick="ExtraKolom()">Creëer Kolom</button>
+<form action="BordTitel_form.asp">
+Titel Kolom: <input type="text" Titel="TitelKolom" value="">
+</form>
+
+<br>
+<button onclick="DeleteKolom1()">Delete Kolom 1</button>
+<button onclick="DeleteKolom2()">Delete Kolom 2</button>
+<button onclick="DeleteKolom3()">Delete Kolom 3</button>
+<button onclick="DeleteKolom4()">Delete Kolom 4</button>
+<button onclick="DeleteKolom5()">Delete Kolom 5</button>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a id="tekstbijlinks"> <button onMouseOver="laatPopupzien('Hier komt de omschrijving van de Sprintgoal, vanuit de Database')" onMouseOut="sluitPopup()" ; return false">Sprintgoal </button>
+<button onmouseover="laatPopupzien('Hier komt de beschrijving van de Definition Of Done, vanuit de Database')" onMouseOut="sluitPopup()" ; return false">Definition Of Done</button>
+
+<table style width="940" height = "560">
+<tr id="TitelsScrumbord" height = "30">
+    <td> Sprint Backlog </td>
+    <td> Doing </td>
+    <td> Done </td>
+</tr>
+<tr id="Scrumbord" ondrop="drop(event)" div ondragover="event.preventDefault()">
+    <td style="vertical-align:top" ></td>
+    <td style="vertical-align:top" ></td>
+    <td style="vertical-align:top" ></td>
+  </tr>
+</table>
+
+<br>
+
+    <img id="Prullenbak" src="http://vignette4.wikia.nocookie.net/winodws/images/4/42/Full_Recycle_Bin.png" width="100" height="100">
+    
+   <input type="image" name="Opslaan" id="imagebutton" src="https://pixabay.com/static/uploads/photo/2013/04/01/08/38/floppy-disk-98413_960_720.png"" width="100" height="100">
+	
+    
+          
+    </td>
+  </tr>
+</table>
+
+<img id="naamloos" src="http://www.brabantsspan.nl/wordpress/wp-content/uploads/2014/01/post-it-green.png" draggable="true"
+ondragstart="drag(event)" width="100" height="69">
+<img id="naamloos2" src="http://www.brabantsspan.nl/wordpress/wp-content/uploads/2014/01/post-it-green.png" draggable="true"
+ondragstart="drag(event)" width="100" height="69">
+<img id="naamloos3" src="http://www.brabantsspan.nl/wordpress/wp-content/uploads/2014/01/post-it-green.png" draggable="true"
+ondragstart="drag(event)" width="50" height="38">
+<img id="naamloos4" src="http://www.brabantsspan.nl/wordpress/wp-content/uploads/2014/01/post-it-green.png" draggable="true"
+ondragstart="drag(event)" width="50" height="38">
+<img id="naamloos5" src="http://www.brabantsspan.nl/wordpress/wp-content/uploads/2014/01/post-it-green.png" draggable="true"
+ondragstart="drag(event)" width="100" height="69">
+<img id="naamloos6" src="http://www.brabantsspan.nl/wordpress/wp-content/uploads/2014/01/post-it-green.png" draggable="true"
+ondragstart="drag(event)" width="100" height="69">
+
+</div>
+</div>                     
+<div id="bericht"></div> 
+
+</body>
+<script>
+function ExtraKolom() {
+    var row = document.getElementById("Scrumbord"),
+    cells = row.cells, max = 5;
+    if (cells.length < max) {
+    var x = row.insertCell(0);
+    x.innerHTML = "";
+}
+    var row1 = document.getElementById("TitelsScrumbord"),
+    cells1 = row1.cells, max = 5;
+    if (cells1.length < max) {
+    var y = row1.insertCell(0);
+    y.innerHTML = "Hier zal een te kiezen titel komen";
+}}
+
+function DeleteKolom1() {
+    var row = document.getElementById("Scrumbord");
+    cells = row.cells, min = 3;
+    if (cells.length > min) {
+    row.deleteCell(0);
+}
+    var row1 = document.getElementById("TitelsScrumbord");
+    cells1 = row1.cells, min = 3;
+    if (cells1.length > min) {
+    row1.deleteCell(0);
+}}
+function DeleteKolom2() {
+    var row = document.getElementById("Scrumbord");
+    cells = row.cells, min = 3;
+    if (cells.length > min) {
+    row.deleteCell(1);
+}
+var row1 = document.getElementById("TitelsScrumbord");
+    cells1 = row1.cells, min = 3;
+    if (cells1.length > min) {
+    row1.deleteCell(1);
+}}
+
+function DeleteKolom3() {
+    var row = document.getElementById("Scrumbord");
+    cells = row.cells, min = 3;
+    if (cells.length > min) {
+    row.deleteCell(2);
+}
+var row1 = document.getElementById("TitelsScrumbord");
+    cells1 = row1.cells, min = 3;
+    if (cells1.length > min) {
+    row1.deleteCell(2);
+}}
+
+function DeleteKolom4() {
+    var row = document.getElementById("Scrumbord");
+    cells = row.cells, min = 3;
+    if (cells.length > min) {
+    row.deleteCell(3);
+}
+var row1 = document.getElementById("TitelsScrumbord");
+    cells1 = row1.cells, min = 3;
+    if (cells1.length > min) {
+    row1.deleteCell(3);
+}}
+function DeleteKolom5() {
+    var row = document.getElementById("Scrumbord");
+    cells = row.cells, min = 3;
+    if (cells.length > min) {
+    row.deleteCell(4);
+}
+var row1 = document.getElementById("TitelsScrumbord");
+    cells1 = row1.cells, min = 3;
+    if (cells1.length > min) {
+    row1.deleteCell(4);
+}}
+
+
+
+</script>
+</html>
+
+<!-- Functionaliteiten:
+
+Overview functionaliteiten Kanbanbord
+ > Automatisch importeren van memo's vanuit Planning tabblad. Worden zichtbaar in de tabel bij comment1. (Te vinden met control + F + "comment1")
+ > Dubbelklikken op een taakbriefje leidt tot vergroting van het taakbriefje 
+ > Taakbriefje moet versleept kunnen worden van bijvoorbeeld "To do" naar "Doing" etc.
+ > Wanneer het taakbriefje versleept wordt, moet de taak automatisch op de naam van de betreffende persoon komen
+ > Er komt/is een team overview tabblad. Hierin kun je aanvinken of je "to check" and "done today" in je kanbanbord wilt hebben
+ > User story’s worden weergegeven als een tekstvak en de taakbriefjes als gele post-it’s
+ > Achtergrond van ieder menu wordt de calco huisstijl template 
+ > De tekst wordt arial en kleur zwart
+ > De menu tekst wordt Arialblack en alles in hoofdletters
+ > Namen van buttons, kopjes e.d. beginnen met een hoofdletter. Wanneer deze uit meerdere woorden bestaat, begint ieder woord met een hoofdletter
+ > Na inloggen, krijgt de gebruiker direct zijn eigen scrumbord te zien
+
+
+Overview functionaliteiten Taakbriefje
+> Het is mogelijk om de Actual SP in te vullen zonder deze te bevestigen. Deze wordt dan voor de individuele gebruiker opgeslapen maar nog niet bevestigd en niet zichtbaar voor anderen. Wanneer het taakbriefje van "doing" naar "done" wordt versleept, dan wordt het invullen van het Actual SP verplicht. Het Actual SP wordt automatisch verstuurd naar het Planning tabblad
+ -->

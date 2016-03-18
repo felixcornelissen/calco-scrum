@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Teams</title>
+        <link rel="stylesheet" type="text/css" href="css_main.css">
+    </head>
+    <body>
+    <div id="container">
+		<div id="menu">
+			<ul id="menubar">
+				<li id="navbuttons"><a href = "html_productbacklog.html" target = "_parent"> Product Backlog</a></li>
+				<li id="navbuttons"><a href = "html_scrumbord.html" target = "_parent"> Scrumbord</a>	</li>
+				<li id="navbuttons"><a href = "html_planning.html" target = "_parent"> Planning</a></li>
+				<li id="navbuttons"><a href = "html_teamoverzicht.html" target = "_parent"> Teams</a></li>
+				<li id="navbuttons"><a href = "html_instellingen.html" target = "_parent"> Instellingen</a></li>
+			</ul>
+		</div>
+       
+        <div id="main">
+            <p><b>Team Name</b></p>
+            <input type="text" name="team_name" value="Scrumdog Millionaires" readonly>
+            <p><b>Start Date Project</b></p>
+            <input type="date" name="startproject" value="2016-02-17" readonly>
+            <p><b>Duration Sprint</b></p>
+            <input type="number" min="0" step="1" name="startsprint" value="14" readonly>
+
+<!-- hier moet een element omheen, met een uniek ID ten behoeve van de CSS -->
+
+            <ul id="header1">
+                <li>Scrum Role</li>
+                <li>Name Member</li>
+                <li>Team</li>
+            </ul>
+            <ul>
+                <li>Product Owner</li>
+                <li><input type="text" name="membername" value="Jorrit" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+            <ul>
+                <li>Scrum Master</li>
+                <li><input type="text" name="membername" value="Joran" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+              <ul>
+                <li>Developer</li>
+                <li><input type="text" name="membername" value="Jens" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+             <ul>
+                <li>Developer</li>
+                <li><input type="text" name="membername" value="Karlijn" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+             <ul>
+                <li>Developer</li>
+                <li><input type="text" name="membername" value="Ireen" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+             <ul>
+                <li>Developer</li>
+                <li><input type="text" name="membername" value="Max" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+             <ul>
+                <li>Developer</li>
+                <li><input type="text" name="membername" value="Sophie" readonly></li>
+                <li><input type="text" name="teamname" value="Scrumdog Millionaires" readonly></li>
+            </ul>
+            <ul id="header2">
+                <li>Burndown Chart</li> 
+            </ul>
+            <img src="burndown.png" height=250 alt="burndown chart">
+		</div>
+        </div>
+    </body>
+</html>

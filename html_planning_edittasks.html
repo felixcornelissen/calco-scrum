@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--Functionaliteit: Zodra er in een tekstveld getypt is, moet dit opgeslagen worden.-->
+<html>
+	<head> 
+		<title> Planning </title>
+		<link rel="stylesheet" type="text/css" href="css_main.css">
+	</head>
+<body>
+<div id="container">
+		<div id="menu">
+			<ul id="menubar">
+				<li id="navbuttons"><a href = "html_productbacklog.html" target = "_parent"> Product Backlog</a></li>
+				<li id="navbuttons"><a href = "html_scrumbord.html" target = "_parent"> Scrumbord</a>	</li>
+				<li id="navbuttons"><a href = "html_planning.html" target = "_parent"> Planning</a></li>
+				<li id="navbuttons"><a href = "html_teamoverzicht.html" target = "_parent"> Teams</a></li>
+				<li id="navbuttons"><a href = "html_instellingen.html" target = "_parent"> Instellingen</a></li>
+			</ul>
+		</div>
+       
+        <div id="main">
+	<div id="knoppen">
+            <ul>
+                <li><input type="text" name="userstoryname" value="Name User Story" style="width:125px;" readonly></li>
+                <!--Functionaliteit dat User Story wordt overgenomen uit Planning, niet een eigen tekstveld-->
+                <li><button type="button">Add Task</button></li>
+                <!--Er wordt een extra regel toegevoegd met mogelijkheid Taak naam/TaakDescription/Delete in te vullen-->
+                <li><button type="button" Onclick="window.location.href='html_planning.html'">Save</button></li>
+                <li><button type="button" Onclick="window.location.href='html_planning.html'">Return</button></li>
+            </ul>
+        </div>
+
+	 <div id="alleRegels">
+            <ul id="header">
+                <li id="kolom1">Tasks</li>
+                <li id="kolom2" style="margin-left:50px;">Description</li>
+				<li id="kolom3" style="margin-left:350px;">Delete</li>
+            </ul>
+        </div>
+     <div id="takenRegels">
+     		<ul>
+     			<li class="kolomTaak"><input type="text" name="taaknaam" value="Taak naam" style="width:140px;"></li>
+     			<li class="kolomDescription" style="margin-left:50px;"><textarea rows="4" cols="50" onClick="make_blank">Hier komt een omschrijving van de taak.</textarea></li>
+     			<li class="knopDelete" style="margin-left:350px;"><button type="button" onCLick="return confirm('Delete this task?.')">Delete</button></li>
+     			<!--Functionaliteit: Delete-knop geeft een pop-up die vraagt om bevestiging delete-verzoek-->
+     		</ul>
+     		<ul>
+     			<li class="kolomTaak"><input type="text" name="taaknaam" value="Taak naam" style="width:140px;"></li>
+     			<li class="kolomDescription" style="margin-left:50px;"><textarea rows="4" cols="50">Hier komt een omschrijving van de taak.</textarea></li>
+     			<li class="knopDelete" style="margin-left:350px;"><button type="button" onCLick="return confirm('Delete this task?.')">Delete</button></li>
+     		</ul>
+     		<ul>
+     		    <li class="kolomTaak"><input type="text" name="taaknaam" value="Taak naam" style="width:140px;"></li>
+     			<li class="kolomDescription" style="margin-left:50px;"><textarea rows="4" cols="50">Hier komt een omschrijving van de taak.</textarea></li>
+     			<li class="knopDelete" style="margin-left:350px;"><button type="button" onCLick="return confirm('Delete this task?.')">Delete</button></li>
+     		</ul>
+	
+	</div>
+	
+
+</div></div>
+</body>
+</html>

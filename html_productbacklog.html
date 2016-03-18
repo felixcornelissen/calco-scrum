@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Product Backlog </title>
+		<link rel="stylesheet" type="text/css" href="css_main.css">
+        <script src="jquery-2.2.1.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script src="jquery.showmore.min.js"></script>
+        <script>
+          $(document).ready(function() {
+          $( "#sortable" ).sortable({axis:'y'});
+          $( "#sortable" ).disableSelection();
+					$(".moveup").on("click", function() {
+					    var elem = $(this).parent().parent().parent().closest("ul");
+					    elem.prev().before(elem);
+					});
+
+						$(".movedown").click(function(){
+							var current = $(this).parent().parent().parent().closest("ul");
+							current.next().insertBefore(current);
+						});
+          $( "#showmore1" ).showMore({
+            speedDown: 10,
+            speedUp: 10,
+            height: '36',
+            showText: 'Show more',
+            hideText: 'Show less'
+     		});
+            $( "#showmore2" ).showMore({
+            speedDown: 10,
+            speedUp: 10,
+            height: '36',
+            showText: 'Show more',
+            hideText: 'Show less'
+     		});
+            $( "#showmore3" ).showMore({
+            speedDown: 10,
+            speedUp: 10,
+            height: '36',
+            showText: 'Show more',
+            hideText: 'Show less'
+     		});
+            $( "#showmore4" ).showMore({
+            speedDown: 10,
+            speedUp: 10,
+            height: '36',
+            showText: 'Show more',
+            hideText: 'Show less'
+     		});
+            $( "#showmore5" ).showMore({
+            speedDown: 10,
+            speedUp: 10,
+            height: '36',
+            showText: 'Show more',
+            hideText: 'Show less'
+     		});
+          });
+          </script>
+	</head>
+<body>
+	<div id="container">
+		<div id="menu">
+			<ul id="menubar">
+				<li id="navbuttons"><a href = "html_productbacklog.html" target = "_parent"> Product Backlog</a></li>
+				<li id="navbuttons"><a href = "html_scrumbord.html" target = "_parent"> Scrumbord</a>	</li>
+				<li id="navbuttons"><a href = "html_planning.html" target = "_parent"> Planning</a></li>
+				<li id="navbuttons"><a href = "html_teamoverzicht.html" target = "_parent"> Teams</a></li>
+				<li id="navbuttons"><a href = "html_instellingen.html" target = "_parent"> Instellingen</a></li>
+			</ul>
+		</div>
+
+        <div id="main">
+        <p class="knoppen">
+
+                <button class="knoppen" type="button" Onclick="window.location.href='html_productbacklog_addepic.html'" style="float: right;" >Add Epic</button>
+                <button class="knoppen" type="button" Onclick="window.location.href='html_productbacklog_adduserstory.html'" style="float: right;" >Add User Story</button>
+	<br>
+	<br>
+        </p>
+        <div id="alleRegels">
+            <ul id="header">
+                <li id="kolom1">Priority</li>
+                <li id="kolom2">User Story</li>
+		        <li id="kolom3">Criterion</li>
+                <li id="kolom4">Ready</li>
+                <li id="kolom5">Epic</li>
+		<li id="kolom6"></li>
+            </ul>
+            <div id="sortable">
+            <ul>
+                <li><ul><li><button type="button" class="moveup">&#8593;</button></li>
+									<li><button type="button" class="movedown">&#8595;</button></li></ul></li>
+		        <li>Sign up form</li>
+                <li><div id = showmore1>Hier komt een criteria, als hier een hele grote criteria komt dan moet er een show more knop komen</div></li>
+                <li><p>&nbsp;&nbsp;&nbsp;<input type="checkbox"></p></li>
+                <li>Nieuwe website</li>
+		<li><button type="button" Onclick="window.location.href='html_productbacklog_edit.html'">Edit</button> &nbsp &nbsp &nbsp <button type="button" Onclick="">x</button></li>
+            </ul>
+            <ul>
+                <li><ul><li><button type="button" class="moveup">&#8593;</button></li>
+									<li><button type="button" class="movedown">&#8595;</button></li></ul></li>
+		        <li>Interface</li>
+		        <li><div id = showmore2>Hier komt een criteria, als hier een helet er een show more knop komen</div></li>
+		        <li><p>&nbsp;&nbsp;&nbsp;<input type="checkbox"></p></li>
+                <li>Nieuwe website</li>
+		<li><button type="button" Onclick="window.location.href='html_productbacklog_edit.html'">Edit</button> &nbsp &nbsp &nbsp <button type="button" Onclick="">x</button></li>
+            </ul>
+	    <ul>
+                <li><ul><li><button type="button" class="moveup">&#8593;</button></li>
+									<li><button type="button" class="movedown">&#8595;</button></li></ul></li>
+		        <li>Log in scherm</li>
+		        <li><div id = "showmore3">Hier komt een criteria, als hier een hele grote criteria komt dan moet er een show more knop komen</div></li>
+                <li><p>&nbsp;&nbsp;&nbsp;<input type="checkbox"></p></li>
+                <li></li>
+		<li><button type="button" Onclick="window.location.href='html_productbacklog_edit.html'">Edit</button> &nbsp &nbsp &nbsp <button type="button" Onclick="">x</button></li>
+            </ul>
+	    <ul>
+                <li><ul><li><button type="button" class="moveup">&#8593;</button></li>
+									<li><button type="button" class="movedown">&#8595;</button></li></ul></li>
+		        <li>Koppeling database</li>
+		        <li><div id = "showmore4">Hier komt een criteria, als hier een hele grote criteria komt dan moet er een show more knop komen</div></li>
+                <li><p>&nbsp;&nbsp;&nbsp;<input type="checkbox"></p></li>
+                <li></li>
+		<li><button type="button" Onclick="window.location.href='html_productbacklog_edit.html'">Edit</button> &nbsp &nbsp &nbsp <button type="button" Onclick="">x</button></li>
+            </ul>
+	    <ul>
+                <li><ul><li><button type="button" class="moveup">&#8593;</button></li>
+									<li><button type="button" class="movedown">&#8595;</button></li></ul></li>
+		        <li>Registreren gebruikers</li>
+		        <li><div id = "showmore5">Hier komt een criteria, als hier een hele grote criteria komt dan moet er een show more knop komen</div></li>
+                <li><p>&nbsp;&nbsp;&nbsp;<input type="checkbox"></p></li>
+                <li>Nieuwe website</li>
+		<li><button type="button" Onclick="window.location.href='html_productbacklog_edit.html'">Edit</button> &nbsp &nbsp &nbsp <button type="button" Onclick="">x</button></li>
+            </ul>
+            </div>
+        </div>
+
+    </div></div>
+
+</body>
+</html>
